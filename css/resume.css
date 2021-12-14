@@ -1,0 +1,160 @@
+.resume-container {
+    display: grid;
+    grid-template-columns: minmax(230px, 1fr) 2fr;
+    margin: auto;
+    padding: 30px;
+    max-width: 900px !important;
+}
+
+html, html body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif;
+}
+
+.left-column{
+	margin-right: 5px;
+    background-color: white;
+}
+
+.work-experience, .education {
+    margin: 0 0 10px 5px;
+    background-color: white;
+}
+
+.certificates {
+	margin-left: 5px;
+    background-color: white;
+}
+
+section.work-experience {
+    padding: 20px;
+}
+
+section.work-experience, section.education, section.certificates {
+    box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,0.25), 0.25em 0.12em 0.25em rgba(0,0,0,0.25);
+    padding: 20px;
+	background: linear-gradient(to left bottom, white, #f5faf5, #dcfcfc);
+}
+
+.left-container >  section {
+    box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,0.25), 0.25em 0.12em 0.25em rgba(0,0,0,0.25);
+    padding: 10px;
+    background: linear-gradient(to left bottom, white, #f5faf5, #dcfcfc);
+    margin-top: 10px;
+}
+
+
+.resume-image-name .name h2 {
+    box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,0.25), 0.25em 0.12em 0.25em rgba(0,0,0,0.25);
+    padding: 5px;
+    border-radius: 2px;
+	background: linear-gradient(to left bottom, white, #f5faf5, #dcfcfc);
+}
+
+.skills, .languages {
+	margin-top: 10px;
+}
+
+section .bar-scale {
+    max-width: 100%;
+    height: 15px;
+    background-color: lightgray;
+    margin: 0 30px;
+    border-radius: 15px;
+}
+
+.full-stack, .mobile, .desktop, .machine, .amharic, .english {
+    height: 15px;
+    background-color: aqua;
+    border-radius: 15px;
+	text-align: center;
+}
+
+.full-stack{
+    width: 90%;
+}
+.mobile{
+    width: 85%;
+}
+.desktop{
+    width: 80%;
+}
+.machine{
+    width: 60%;
+}
+
+.amharic{
+    width: 100%;
+}
+
+.english{
+	width: 75%;
+}
+
+/*.work-experience--item h5, .work-experience--item h6 , 
+.education-item h5, .education-item h6, .certificates-item h5, .certificates-item h6{
+    line-height: 5px;
+}*/
+
+.work-experience > div, .education > div, .certificates > div{
+	padding-left: 10px;
+}
+
+.certificates div p a {
+    text-decoration: none;
+    background-color: papayawhip;
+    border: 1px solid;
+    padding: 3px;
+}
+
+.certificates div p a:hover {
+    color: purple;
+    background-color: white;
+}
+
+.certificates-item h6, .certificates-item p, .education-item h6, .education-item p {
+    margin-left: 20px;
+}
+
+
+@media all and (max-width: 600px){
+	.resume-container {
+		grid-template-columns: 1fr;
+		max-width: 400px !important;
+		padding: 5px;
+	}
+	
+	.work-experience, .education, .certificates{
+		margin: auto;
+	}
+}
+
+#resume-img {
+    background-repeat: no-repeat;
+    box-sizing: content-box;
+    min-height: 331px;
+    max-width: 255px;
+    margin: auto;
+    box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,0.25), 0.25em 0.12em 0.25em rgba(0,0,0,0.25);
+    background-size: cover;
+    animation-name: swap-img;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-play-state: running;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 10px;
+}
+
+
+@keyframes swap-img{
+	0%{background-image: url("..images/bisrat_2.jpg");}
+	22%{background-image: url("../images/problem_1.jpg");}
+	40%{background-image: url("../images/problem_2.jpg");}
+	60%{background-image: url("../images/problem_3.jpg");}
+	80%{background-image: url("../images/problem_4.jpg");}
+	100%{background-image: url("../images/problem_5.jpg");}
+}
