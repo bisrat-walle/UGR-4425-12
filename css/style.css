@@ -4,6 +4,7 @@
 }
  body {
      overflow-x: hidden;
+	 margin:0px;
 }
 
 html, html body, h1, h2, h3, h4, h5, h6 {
@@ -32,9 +33,7 @@ html, html body, h1, h2, h3, h4, h5, h6 {
      align-self: center;
      border:none;
 }
- header > img:hover {
-     transform: scale(1.1);
-}
+
  nav ul {
      list-style-type: none;
      display: flex;
@@ -157,6 +156,11 @@ nav ul span.active-page {
      align-self: center;
      width: auto;
      max-height: 50px;
+	 top: 3px;
+}
+
+header img:hover {
+     transform: scale(1.1);
 }
 
 a#email:hover {
@@ -226,17 +230,20 @@ a#email:hover {
 }
 
 
- .intro-discription h2 {
-     width: 34.375rem;
-     text-align: right;
-     position: relative;
-     right: 20.9375rem;
-     background-color: aqua;
-     padding: 10px 5px;
-     z-index: -5;
-     font-family: monospace;
-     font-size: 1.25rem;
+.intro-discription h2 {
+    width: 34.375rem;
+    text-align: right;
+    position: relative;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    right: 20.9375rem;
+    background-color: aqua;
+    padding: 10px 5px;
+    z-index: -5;
+    font-family: monospace;
+    font-size: 1.25rem;
 }
+
  .intro-discription h1 {
      font-weight: 200;
      padding-left: 10px;
@@ -270,14 +277,16 @@ h1 span#name {
 	}
 	
 	.intro-discription h2 {
-		width: 100%;
+		width: 90%;
 		text-align: center;
 		background-color: aqua;
 		padding: 10px 5px;
 		z-index: -5;
 		font-family: monospace;
 		font-size: 1.25rem;
-		right:0;
+		right: 0;
+		display: block;
+		margin: 0 auto 20px;
 	}
 	
 	.intro{
