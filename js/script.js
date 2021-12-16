@@ -103,3 +103,14 @@ if (name != null || name != undefined){
 
 }
 
+var average = document.getElementById('average-progress');
+var progresses = document.querySelectorAll('tr td:nth-child(3)')
+if (average != null && average != undefined){
+	let sum = 0, counter =0;
+	for (let i of progresses){
+		sum += parseFloat(i.innerHTML)
+		counter += 1
+	}
+	average.innerHTML = "("+(sum/counter).toFixed(2) + "%)";
+}
+

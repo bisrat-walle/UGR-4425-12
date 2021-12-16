@@ -52,12 +52,7 @@ td, th {
 }
 
 section.in-progress {
-    max-width: 500px;
-    margin: 50px auto;
-}
-
-section.in-progress {
-    max-width: 24em;
+    max-width: 45em;
     margin: 50px auto;
     padding: 5px;
     box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,0.25), 0.25em 0.12em 0.25em rgba(0,0,0,0.25);
@@ -93,8 +88,11 @@ h4.plugin-title {
 		padding: 0px;
 	}
 }
-table { border-collapse: collapse; }
-
+table { border-collapse: collapse; }table {
+    border-collapse: collapse;
+    max-width: 100%;
+    margin: 10px auto;
+}
 section.in-progress tr {
     border-bottom: 2px solid black;
 	border-right: 2px solid;
@@ -106,11 +104,6 @@ thead tr, tfoot tr {
 
 tfoot tr td {
     text-align: center;
-}
-
-section.in-progress {
-    max-width: 24em;
-    margin: 50px auto;
 }
 
 
