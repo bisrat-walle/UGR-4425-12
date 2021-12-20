@@ -240,7 +240,6 @@ a#email:hover {
     background-color: aqua;
     padding: 10px 5px;
     z-index: -5;
-    font-family: monospace;
     font-size: 1.25rem;
 }
 
