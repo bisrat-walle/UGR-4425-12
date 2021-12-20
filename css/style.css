@@ -238,7 +238,7 @@ a#email:hover {
     border-bottom-left-radius: 20px;
     right: 20.9375rem;
     background-color: aqua;
-    padding: 10px 5px;
+    padding: 10px 15px;
     z-index: -5;
     font-size: 1.25rem;
 }
