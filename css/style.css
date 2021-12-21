@@ -12,19 +12,19 @@ html, html body, h1, h2, h3, h4, h5, h6 {
 }
 
 /* Header */
- .nav-toggle span.bar {
+ .nav-toggle .nav-toggle__humburger__bar {
      display: block;
      width: 35px;
      background-color: aqua;
      height: 3px;
 }
- .humburger{
+ .nav-toggle__humburger{
      display: flex;
      flex-direction: column;
      justify-content: space-between;
      height: 25px;
 }
- button.nav-toggle {
+ .nav-toggle {
      background-color: transparent;
      cursor: pointer;
      height: 25px;
@@ -41,7 +41,7 @@ html, html body, h1, h2, h3, h4, h5, h6 {
      padding-left:0;
 }
 
-nav ul span.active-page {
+nav ul .active-page {
     min-width: 100%;
     height: 3px;
     background-color: aqua;
@@ -59,7 +59,7 @@ nav ul span.active-page {
 }
 /* Small screens */
  @media all and (max-width: 665px) {
-     button.nav-toggle {
+    .nav-toggle {
          display: block;
     }
     nav ul {
@@ -67,27 +67,24 @@ nav ul span.active-page {
 		justify-content: space-between;
 	}
 	
-	.clicked span.bar:first-child {
+	.clicked .nav-toggle__humburger__bar:first-child {
 		transform: rotate(45deg);
 	}
 	
-	.clicked span.bar:last-child {
+	.clicked .nav-toggle__humburger__bar:last-child {
 		transform: rotate(225deg);
 	}
 	
-	.clicked span.bar:nth-child(2) {
+	.clicked .nav-toggle__humburger__bar:nth-child(2) {
 		opacity:0;
 	}
 	
-	nav ul span.active-page{
+	nav ul .active-page{
 		margin-bottom:-14px;
 	}
 	
-	.active-page.active-page-home{
-		margin-bottom:0px;
-	}
 	
-	span.humburger.clicked {
+	.nav-toggle__humburger.clicked {
 		position: relative;
 		top: 10px;
 		transform: scale(.85);
@@ -98,12 +95,13 @@ nav ul span.active-page {
 		top: -1px;
 	}
 	
-	nav.hide {
+	.hide {
 		left: 9px;
 		text-align: center;
+        transform: translateX(0%);
 	}
 	
-	.clicked span.bar:last-child {
+	.clicked .nav-toggle__humburger__bar:last-child {
 		transform: rotate(-45deg);
 		position: relative;
 		top: -20.6px;
@@ -118,16 +116,14 @@ nav ul span.active-page {
          left: 7px;
          box-shadow: 0 0 5px 2px #282a2d;
     }
-     .hide{
-         transform: translateX(0%);
-    }
 	
 	
 	
-     html{
+    html{
          font-size:11px;
     }
-     header {
+	
+    header {
          padding: 10px 15px;
          justify-content: space-between !important;
     }
@@ -211,7 +207,7 @@ a#email:hover {
      transform: scale(1.1);
 }
 /* main */
- .main-buttons {
+.main-buttons {
      display: flex;
      justify-content: center;
      margin-top: 30px;
@@ -230,7 +226,7 @@ a#email:hover {
 }
 
 
-.intro-discription h2 {
+.intro__discription h2 {
     width: 34.375rem;
     text-align: right;
     position: relative;
@@ -243,16 +239,20 @@ a#email:hover {
     font-size: 1.25rem;
 }
 
- .intro-discription h1 {
+.intro__discription h1 {
      font-weight: 200;
      padding-left: 10px;
 	 min-height: 64px;
+	 
+		font-size: 2rem;
 }
-h1 span#name {
+
+#name {
     font-weight: 900;
     display: block;
 }
- .intro-discription {
+
+.intro__discription {
      padding-top: 10rem;
 }
 
@@ -268,14 +268,14 @@ h1 span#name {
 		flex-direction: column-reverse;
 	}
 	
-	.intro-discription {
+	.intro__discription {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
 		padding-top: 0;
 	}
 	
-	.intro-discription h2 {
+	.intro__discription h2 {
 		width: 90%;
 		text-align: center;
 		background-color: aqua;
@@ -292,7 +292,7 @@ h1 span#name {
 		left: 0px;
 	}
 	
-	.intro-discription h1 {
+	.intro__discription h1 {
 		font-weight: 200;
 		padding-left: 10px;
 		text-align: center;
@@ -309,7 +309,7 @@ h1 span#name {
 
 /* Services */
 
-section.service, .service-summary {
+.service, .service-summary {
     box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,0.25), 0.25em 0.12em 0.25em rgba(0,0,0,0.25);
     padding: 10px;
     margin-bottom: 50px;
@@ -318,39 +318,39 @@ section.service, .service-summary {
 }
 
 
-.service-body-img-left {
+.service__body--img-left {
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
 
-.service-body-img-right {
+.service__body--img-right {
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
 
 @media screen and (max-width:500px){
-	.service-body-img-left {
+	.service__body--img-left {
 		grid-template-columns: 1fr;
 	}
 
-	.service-body-img-right {
+	.service__body--img-right {
 		grid-template-columns: 1fr;
 	}
 }
 
-main.service-main img {
+.service-main img {
     max-width: 15rem;
 	margin:auto;
 }
 
-main.service-main {
+.service-main {
     margin: auto;
     max-width: 750px;
     padding: 0 20px;
 	font-size: 13px;
 }
 
-p.service-body {
+.service__body__par {
     margin: auto;
     display: flex;
     padding: 20px;
@@ -368,7 +368,7 @@ p.service-body {
 
 
 /* Contact Me*/
- main.main-contactme {
+ main-contactme {
      max-width: 500px;
      margin: 70px auto;
      padding: 5px;
@@ -380,6 +380,15 @@ form {
     padding: 15px;
     color: black;
     box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,0.25), 0.25em 0.12em 0.25em rgba(0,0,0,0.25);
+	margin: 10px;
+}
+
+.main-contactme__title {
+    margin: 25px auto 0px;
+}
+
+.main-contactme__description {
+    margin: 5px auto auto 2px;
 }
 
 input[type="email"] {
@@ -413,19 +422,10 @@ form > * {
     margin: 25px auto;
 }
 
-.main-contactme button {
-    margin: auto;
-    position: relative;
-    float: right;
-    top: -20px;
-    background: none;
-    border: 2px solid brown;
-}
-
 
 /* About Me */
 
-main.aboutme-main {
+.aboutme-main {
     max-width: 500px;
     margin: 80px auto;
     box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,0.25), 0.25em 0.12em 0.25em rgba(0,0,0,0.25);
@@ -434,7 +434,7 @@ main.aboutme-main {
     background: linear-gradient(to left bottom, white, #f5faf5, #dcfcfc);
 }
 
-.service-body p, .aboutme-body p {
+.service__body__par, .aboutme-main__body p {
     padding: 12px;
     box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,0.25), 0.25em 0.12em 0.25em rgba(0,0,0,0.25);
     border-radius: 10px;
@@ -442,7 +442,7 @@ main.aboutme-main {
     align-self: center;
 }
 
-.service-summary p:hover, .service-body p:hover, .aboutme-body p:hover {
+.service-summary p:hover, .service__body__par:hover, .aboutme-main__body p:hover {
     transform: scale(1.05);
     transition-duration: 500ms;
     transition-timing-function: ease-out;
@@ -455,11 +455,11 @@ main.aboutme-main {
     margin: 10px;
 }
 
-.aboutme-main h2.title {
+.aboutme-main__title {
     font-weight: 550;
 }
 
-button#send-mail {
+#send-mail {
     margin: 0;
 }
 
@@ -471,7 +471,7 @@ button#send-mail {
 
 /* Button Effect*/
 
-.button-container .glow {
+.button-container .button--glow {
     height: 45px;
     border: none;
     outline: none;
@@ -485,7 +485,7 @@ button#send-mail {
     font-size: 1.5rem;
 }
 
-.button-container .glow::before {
+.button-container .button--glow::before {
     content: '';
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
@@ -502,11 +502,11 @@ button#send-mail {
     border-radius: 10px;
 }
 
-.button-container .glow:hover::after {
+.button-container .button--glow:hover::after {
     background: transparent;
 }
 
-.button-container .glow::after {
+.button-container .button--glow::after {
     z-index: -1;
     content: '';
     position: absolute;

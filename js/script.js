@@ -1,7 +1,7 @@
 var navToggle = document.getElementsByClassName("nav-toggle")[0];
 navToggle.addEventListener("click", () => {
 	var navLinks = document.getElementsByTagName('nav');
-	var humb = document.querySelector('.humburger');
+	var humb = document.querySelector('.nav-toggle__humburger');
 	
 	navLinks[0].classList.toggle("hide");
 	humb.classList.toggle("clicked");
@@ -72,8 +72,8 @@ if (downloadResume != null || downloadResume != undefined){
 	});
 }
 
-let greeting = document.querySelector(".intro-discription h1 span#notname");
-let name = document.querySelector('.intro-discription h1 span#name');
+let greeting = document.querySelector(".intro__discription h1 #notname");
+let name = document.querySelector('.intro__discription h1 #name');
 
 let greeting_text = "Hi, I am";
 let name_text = "Bisrat Walle";

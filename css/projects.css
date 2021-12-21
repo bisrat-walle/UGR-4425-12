@@ -84,8 +84,9 @@ h4.plugin-title {
 		display: grid;
 		grid-template-columns: 1fr;
 	}
-	main.main-projects{
+	main.main-projects {
 		padding: 0px;
+		margin: 5px;
 	}
 }
 table {
