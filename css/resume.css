@@ -1,13 +1,13 @@
+html, html body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif;
+}
+
 .resume-container {
     display: grid;
     grid-template-columns: minmax(230px, 1fr) 2fr;
     margin: auto;
     padding: 30px;
     max-width: 900px !important;
-}
-
-html, html body, h1, h2, h3, h4, h5, h6 {
-    font-family: "Roboto", sans-serif;
 }
 
 .left-column{
@@ -25,11 +25,11 @@ html, html body, h1, h2, h3, h4, h5, h6 {
     background-color: white;
 }
 
-section.work-experience {
+.work-experience {
     padding: 20px;
 }
 
-section.work-experience, section.education, section.certificates {
+.work-experience, .education, .certificates {
     box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,0.25), 0.25em 0.12em 0.25em rgba(0,0,0,0.25);
     padding: 20px;
 	background: linear-gradient(to left bottom, white, #f5faf5, #dcfcfc);
@@ -54,7 +54,7 @@ section.work-experience, section.education, section.certificates {
 	margin-top: 10px;
 }
 
-section .bar-scale {
+.skills .bar-scale {
     max-width: 100%;
     height: 15px;
     background-color: lightgray;
@@ -90,11 +90,6 @@ section .bar-scale {
 	width: 75%;
 }
 
-/*.work-experience--item h5, .work-experience--item h6 , 
-.education-item h5, .education-item h6, .certificates-item h5, .certificates-item h6{
-    line-height: 5px;
-}*/
-
 .work-experience > div, .education > div, .certificates > div{
 	padding-left: 10px;
 }
@@ -111,7 +106,7 @@ section .bar-scale {
     background-color: white;
 }
 
-.certificates-item h6, .certificates-item p, .education-item h6, .education-item p {
+.certificates__item h6, .certificates__item p, .education__item h6, .education__item p {
     margin-left: 20px;
 }
 
@@ -128,7 +123,7 @@ section .bar-scale {
 	}
 }
 
-#resume-img {
+.resume-img {
     background-repeat: no-repeat;
     box-sizing: content-box;
     min-height: 331px;
@@ -151,7 +146,7 @@ section .bar-scale {
 
 
 @keyframes swap-img{
-	0%{background-image: url("..images/bisrat_2.jpg");}
+	0%{background-image: url("../images/bisrat_2.jpg");}
 	22%{background-image: url("../images/problem_1.jpg");}
 	40%{background-image: url("../images/problem_2.jpg");}
 	60%{background-image: url("../images/problem_3.jpg");}

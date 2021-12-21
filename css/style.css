@@ -368,11 +368,10 @@ a#email:hover {
 
 
 /* Contact Me*/
- main-contactme {
+ .main-contactme {
      max-width: 500px;
      margin: 70px auto;
      padding: 5px;
-	 background: linear-gradient(to left bottom, white, #f5faf5, #dcfcfc);
 }
 
 form {
@@ -381,6 +380,7 @@ form {
     color: black;
     box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,0.25), 0.25em 0.12em 0.25em rgba(0,0,0,0.25);
 	margin: 10px;
+	 background: linear-gradient(to left bottom, white, #f5faf5, #dcfcfc);
 }
 
 .main-contactme__title {
